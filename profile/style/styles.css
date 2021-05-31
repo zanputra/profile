@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+/*===== VARIABLES CSS =====*/
+:root {
+  --nav-width: 68px;
+  /*===== Colors =====*/
+  --bg-color: rgb(20, 20, 20);
+  --base-color: black;
+  --highlight-color: #3a3a3a;
+  --white-color: #e0e0e0;
+  /*===== Font and typography =====*/
+  --body-font: 'Poppins', sans-serif;
+  --normal-font-size: 1rem;
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  position: relative;
+  margin-left: var(--nav-width);
+  padding: 0 1rem;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  -webkit-transition: .5s;
+  transition: .5s;
+  width: 100vw-var(--nav-width);
+  height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.container {
+  width: 100vw-var(--nav-width);
+  height: 100%;
+}
+
+.container section {
+  color: #ffebcd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container section .intro-graphics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container section .intro-graphics .foto-profil {
+  border-radius: 50%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.container section .intro-graphics .F-logo {
+  font-size: 220px;
+  top: 5px;
+  left: 55px;
+  position: relative;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  -webkit-transition: -webkit-transform .7s ease-in-out;
+  transition: -webkit-transform .7s ease-in-out;
+  transition: transform .7s ease-in-out;
+  transition: transform .7s ease-in-out, -webkit-transform .7s ease-in-out;
+}
+
+.container section .intro-graphics .F-logo .f1 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.container section .intro-graphics .F-logo .f2 {
+  position: relative;
+  color: darkblue;
+}
+
+.container section .intro-graphics .F-logo:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.container section .intro-text {
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 5px;
+}
+
+.container section .edu {
+  overflow: hidden;
+  font-size: 20px;
+  position: relative;
+  -webkit-animation: animated-text 2s steps(30, end) 1s 1 normal both;
+          animation: animated-text 2s steps(30, end) 1s 1 normal both;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@-webkit-keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 480px;
+  }
+}
+
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 480px;
+  }
+}
+
+.container section .eduPic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 600px;
+  height: 250px;
+  color: #fdfdfd00;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.container section .eduPic .school-pic {
+  position: relative;
+}
+
+.container section .eduPic img {
+  width: 250px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.container section .eduPic p {
+  position: absolute;
+  font-size: 12px;
+  top: 105px;
+  left: 20px;
+  width: 50%;
+}
+
+.container section .eduPic .school-pic:hover img {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.container section .eduPic .school-pic:hover p {
+  color: #ffffff;
+}
+
+.container section .btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  font-size: 100px;
+}
+
+.container section .btn-contact {
+  margin: 10px;
+  color: blanchedalmond;
+  text-decoration: none;
+}
+
+/*===== Side Nav Bar =====*/
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--nav-width);
+  height: 100vh;
+  background-color: var(--base-color);
+  padding: 1rem 1rem 0 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  overflow: hidden;
+}
+
+.nav__link, .nav__toggle {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content max-content;
+      grid-template-columns: -webkit-max-content -webkit-max-content;
+      grid-template-columns: max-content max-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  padding: .5rem 0 .5rem 1.5rem;
+  position: relative;
+  color: var(--highlight-color);
+  margin-bottom: 1.5rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav__link:hover, .nav__toggle:hover {
+  color: var(--white-color);
+}
+
+.nav__toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav__icon {
+  font-size: 1.25rem;
+}
+
+/*Show navbar movil*/
+.show {
+  width: calc(var(--nav-width) + 150px);
+}
+
+/*Active links*/
+.active {
+  color: var(--white-color);
+}
+
+/* ===== MEDIA QUERIES=====*/
+/*# sourceMappingURL=styles.css.map */
